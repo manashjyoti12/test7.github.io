@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha256-jDnOKIOq2KNsQZTcBTEnsp76FnfMEttF6AV2DF2fFNE=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="sha256-JtQPj/3xub8oapVMaIijPNoM0DHoAtgh/gwFYuN5rik=" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="style2.css">
+</head>
+<body >
+			<button class="btn btn-outline-success but"  id="btn">CLICK ME</button>
+			<div class="first" id="ball">
+				<img src="photo/img4.gif" width="400px" height="800px">
+				
+				
+
+			</div>
+
+
+			<div class="header text-white" id="bg"> 
+
+
+		<div id="im1" class="p1">
+		<img src="photo/img6.gif"   width="200px">
+	</div>
+
+	<div class="second" id="img2">
+		<img src="photo/img12.gif" width="200px">
+	</div>
+
+	<div class="p2" id="im2">
+		<img src="photo/img9.gif" width="120px">
+	</div>
+
+	<div class="p3" id="im3">
+		<img src="photo/img11.gif" width="120px">
+	</div>
+
+	<div class="p4" id="im4">
+		<img src="photo/img8.gif" width="120px">
+	</div>
+
+	<div class="o1" id="last1">
+		<img src="photo/img14.gif" width="120px">
+	</div>
+
+	<div class="o2" id="last2">
+		<img src="photo/img13.gif" width="300px" height="400px">
+	</div>
+
+	<div class="o3 shadow" id="last3" >
+		<h5 > HAPPY BIRTHDAY</h5>
+
+		<h4>Ramjan</h4>
+		<h6 class="pt-3">May this special day bring you endless joy and tons of precious memories!</h6>
+		
+	</div>
+
+	<audio src="audio.mp3" id="aud" ></audio>
+
+
+	</div>
+	
+
+</body>
+
+	<script src="js/jq.js"></script>
+
+	<script>
+
+
+		$(document).ready(function(){
+
+				$("#btn").click(function(){
+						
+
+
+						$(this).hide();
+
+						document.getElementById('aud').play();
+
+						$("#ball").animate({
+							opacity:'1',
+						},500,function(){
+
+							$("#ball").animate({
+
+								opacity:'0',
+							},1000,function(){
+								$("#bg").animate({
+									opacity:'1',
+								},1000,function(){
+									$("#im1").animate({
+
+										opacity:'1',
+									},500);
+
+									$("#im2").animate({
+										opacity:'1',
+									},2000);
+
+									$("#im3").animate({
+										opacity:'1',
+									},2000,function(){
+
+										$("#last1").animate({
+											opacity:'1',
+										},300,function(){
+											$("#last2").animate({
+												opacity:'1',
+											},1000);
+
+											$("#im4").animate({
+												opacity:'1',
+											},1000);
+
+											$("#last1").animate({
+												opacity:'0',
+											},1500,function(){
+												$("#last2").animate({
+													opacity:'0',
+												},2800,function(){
+													$("#last3").animate({
+														width:'200px',
+														opacity:'0.2',
+													},2000,function(){
+														$("#last3").animate({
+															height:'180px',
+															opacity:'0.6',
+														},2000);
+													});
+												});
+
+
+
+
+
+											});
+
+
+										});
+
+
+
+
+									});
+
+									
+
+
+
+
+								});
+
+
+
+
+
+							});
+
+
+
+
+						});
+
+
+				});
+
+				
+
+
+		})	;
+
+
+	</script>
+
+
+</html>
